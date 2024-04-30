@@ -1,0 +1,9 @@
+DECLARE
+ Vemployee_id EMPLOYEES.EMPLOYEE_ID%type := 207;
+ Vpercentual NUMBER(3) := 10;
+ BEGIN
+ UPDATE EMPLOYEES
+ SET SALARY = SALARY * (1 + Vpercentual/10)
+ WHERE EMPLOYEE_ID = Vemployee_id;
+ COMMIT;
+ END;
